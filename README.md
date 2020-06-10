@@ -1,4 +1,6 @@
-# react-native-immersive 
+# react-native-hidenavbar 
+
+fork from react-native-immersive but only hiding navbar
 
 [![i:npm]][l:npm]
 [![i:npm-dm]][l:npm]

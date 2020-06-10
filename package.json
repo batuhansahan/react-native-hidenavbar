@@ -1,8 +1,8 @@
 {
-  "name": "react-native-immersive",
-  "version": "2.0.0",
-  "description": "Add Toggle for Android Immersive FullScreen Layout",
-  "author": "MockingBot",
+  "name": "react-native-hidenavbar",
+  "version": "1.0.0",
+  "description": "Hide Android Navbar",
+  "author": "Batuhan Şahan",
   "license": "MIT",
   "keywords": [
     "react-component",
@@ -12,7 +12,7 @@
     "menu-bar",
     "fullscreen"
   ],
-  "repository": "github:mockingbot/react-native-immersive",
+  "repository": "github:batuhansahan/react-native-hidenavbar",
   "main": "index.js",
   "scripts": {
     "publish-dev": "npm publish --tag dev --userconfig ~/mockingbot.npmrc",
