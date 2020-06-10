@@ -1,5 +1,5 @@
 import { NativeModules, DeviceEventEmitter, Platform } from 'react-native'
-const { RNImmersive } = NativeModules
+const { RNHidenavbar } = NativeModules
 
 const unSupportedError = __DEV__
   ? () => { throw new Error('[react-native-immersive] should not be called on iOS') }
@@ -8,15 +8,15 @@ const unSupportedError = __DEV__
 let isListenerEnabled = false
 
 const Immersive = Platform.OS === 'android' ? {
-  on: () => RNImmersive.setImmersive(true),
-  off: () => RNImmersive.setImmersive(false),
-  setImmersive: (isOn) => RNImmersive.setImmersive(isOn),
-  getImmersive: () => RNImmersive.getImmersive(), // do not always match actual display state
+  on: () => RNHidenavbar.setImmersive(true),
+  off: () => RNHidenavbar.setImmersive(false),
+  setImmersive: (isOn) => RNHidenavbar.setImmersive(isOn),
+  getImmersive: () => RNHidenavbar.getImmersive(), // do not always match actual display state
   addImmersiveListener: (listener) => {
     DeviceEventEmitter.addListener('@@IMMERSIVE_STATE_CHANGED', listener)
     if (isListenerEnabled) return
     isListenerEnabled = true
-    RNImmersive.addImmersiveListener()
+    RNHidenavbar.addImmersiveListener()
   },
   removeImmersiveListener: (listener) => DeviceEventEmitter.removeListener('@@IMMERSIVE_STATE_CHANGED', listener)
 } : {

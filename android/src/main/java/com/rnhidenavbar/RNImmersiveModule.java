@@ -1,4 +1,4 @@
-package com.rnimmersive;
+package com.hidenavbar;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -19,22 +19,22 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 /**
  * {@link NativeModule} that allows changing the appearance of the menu bar.
  */
-public class RNImmersiveModule extends ReactContextBaseJavaModule {
+public class RNHidenavbarModule extends ReactContextBaseJavaModule {
   private static final String ERROR_NO_ACTIVITY = "E_NO_ACTIVITY";
   private static final String ERROR_NO_ACTIVITY_MESSAGE = "Tried to set immersive while not attached to an Activity";
   private static final int UI_FLAG_IMMERSIVE = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
 
-  private static RNImmersiveModule SINGLETON = null;
+  private static RNHidenavbarModule SINGLETON = null;
 
   private ReactContext _reactContext = null;
   private boolean _isImmersiveOn = false;
 
-  public static RNImmersiveModule getInstance () {
+  public static RNHidenavbarModule getInstance () {
     return SINGLETON;
   }
 
-  public RNImmersiveModule(ReactApplicationContext reactContext) {
+  public RNHidenavbarModule(ReactApplicationContext reactContext) {
     super(reactContext);
 
     _reactContext = reactContext;
@@ -49,7 +49,7 @@ public class RNImmersiveModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "RNImmersive";
+    return "RNHidenavbar";
   }
 
   @ReactMethod
