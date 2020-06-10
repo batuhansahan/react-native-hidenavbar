@@ -1,4 +1,4 @@
-package com.hidenavbar;
+package com.rnhidenavbar;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
